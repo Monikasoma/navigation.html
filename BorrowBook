@@ -1,0 +1,18 @@
+let books = [
+    { title: "The Catcher in the Rye", author: "J.D. Salinger", isAvailable: true },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", isAvailable: true }
+];
+    function borrowBook(title) {
+    let book = books.find(book => book.title === title);
+    if (book && book.isAvailable) {
+        book.isAvailable = false;
+        console.log(`You have borrowed "${book.title}" by ${book.author}.`);
+    } else {
+        console.log(`"${title}" is not available for borrowing.`);
+    }
+}
+borrowBook("The Catcher in the Rye");
+borrowBook("To Kill a Mockingbird");
+borrowBook("Some Nonexistent Book");
+
+console.log(books); 
