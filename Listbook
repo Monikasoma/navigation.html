@@ -1,0 +1,11 @@
+let books = [
+    { title: "The Catcher in the Rye", author: "J.D. Salinger", isAvailable: false },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", isAvailable: true }
+];
+function listBooks() {
+    console.log("Library Catalog:");
+    books.forEach(book => {
+        const availability = book.isAvailable ? "Available" : "Not Available";
+        console.log(`Title: ${book.title}, Author: ${book.author}, Availability: ${availability}`);
+    });
+}
