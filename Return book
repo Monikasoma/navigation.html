@@ -1,0 +1,18 @@
+let books = [
+    { title: "The Catcher in the Rye", author: "J.D. Salinger", isAvailable: false },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", isAvailable: false }
+];
+function returnBook(title) {
+    let book = books.find(book => book.title === title);
+    if (book && !book.isAvailable) {
+        book.isAvailable = true;
+        console.log(`You have returned "${book.title}" by ${book.author}.`);
+    } else {
+        console.log(`"${title}" is not valid or is already available.`);
+    }
+}
+returnBook("The Catcher in the Rye");
+returnBook("To Kill a Mockingbird");
+returnBook("Some Nonexistent Book");
+
+console.log(books); 
